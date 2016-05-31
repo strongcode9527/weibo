@@ -1,0 +1,565 @@
+#weibo_logo {
+  margin: 0 0 0 120px; }
+
+body {
+  margin: 0; }
+
+.header_part {
+  font-size: 10px;
+  text-align: center;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  top: 0px;
+  cursor: pointer; }
+
+#header {
+  background: #DCDCDC;
+  height: 30px;
+  border: 1px #999 solid;
+  width: 100%; }
+
+#log_in {
+  left: 850px;
+  width: 200px; }
+
+#register {
+  left: 1020px; }
+
+#persional {
+  left: 1090px;
+  height: 30px;
+  overflow: hidden; }
+  #persional_menu {
+    background: #C0FF3E;
+    display: none; }
+
+#log_in_kuang {
+  border: 1px #999 solid;
+  width: 400px;
+  height: 300px;
+  position: relative;
+  background: #FFF5EE;
+  display: none;
+  z-index: 10; }
+  #login_button {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
+    top: 200px;
+    left: 30%;
+    position: absolute;
+    border: 1px #999 solid;
+    background: #FFE4B5;
+    cursor: pointer; }
+
+  #login_error {
+    border: 1px #999 solid;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: red;
+    position: absolute;
+    top: 250px;
+    left: 30%;
+    color: white;
+    display: none; }
+
+.log_in_kuang_part {
+  color: #333;
+  margin: 10px;
+  width: 300px; }
+
+.log_in_kuang_header {
+  border: 1px #999 solid;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #fff;
+  cursor: move; }
+  .log_in_kuang_header img {
+    float: right;
+    margin: 7px 10px;
+    cursor: pointer; }
+
+#login_info {
+  margin-left: auto;
+  width: 300px;
+  position: absolute;
+  top: 100px;
+  left: 20%; }
+
+#cover {
+  opacity: 0.3;
+  background: black;
+  display: none;
+  position: absolute;
+  z-index: 9; }
+
+#slide {
+  position: relative;
+  top: 80px;
+  margin: auto;
+  width: 520px;
+  height: 40px;
+  background: #CDBE70;
+  overflow: hidden;
+  border-radius: 5px; }
+  #slide_first_level {
+    width: 500px;
+    height: 30px;
+    left: 10px;
+    top: 5px;
+    position: absolute; }
+    #first_ul {
+      width: 500px;
+      padding: 0;
+      height: 30px;
+      margin: 0;
+      z-index: 0; }
+      .first_ul_li {
+        float: left;
+        list-style-type: none;
+        text-align: center;
+        line-height: 30px;
+        width: 100px;
+        height: 30px; }
+
+  #slide_second_level {
+    width: 500px;
+    height: 30px;
+    left: 10px;
+    top: 5px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    background: black;
+    border-radius: 5px;
+    width: 100px; }
+    #second_ul {
+      width: 500px;
+      padding: 0;
+      height: 30px;
+      margin: 0;
+      position: absolute; }
+      .second_ul_li {
+        float: left;
+        list-style-type: none;
+        text-align: center;
+        line-height: 30px;
+        width: 100px;
+        height: 30px;
+        color: white; }
+
+  #slide_third_level {
+    width: 500px;
+    height: 30px;
+    left: 10px;
+    top: 5px;
+    position: absolute;
+    z-index: 2; }
+    #third_ul {
+      width: 500px;
+      padding: 0;
+      height: 30px;
+      margin: 0; }
+      .third_ul_li {
+        float: left;
+        list-style-type: none;
+        text-align: center;
+        line-height: 30px;
+        width: 100px;
+        height: 30px; }
+
+#left_bar {
+  width: 200px;
+  position: relative;
+  top: 350px;
+  left: 60px; }
+  #left_bar ul {
+    padding: 0; }
+  .left_bar_part {
+    margin: 10px 0;
+    border: 1px #999 solid; }
+    .left_bar_part h3 {
+      border-bottom: 1px #999 solid;
+      margin: 0;
+      text-align: center;
+      cursor: pointer; }
+    .left_bar_part li {
+      list-style-type: none;
+      margin: 3px; }
+
+#left_slide {
+  position: absolute;
+  width: 30px;
+  height: 100px;
+  background: black;
+  color: white;
+  line-height: 50px;
+  text-align: center; }
+
+#rotator {
+  margin: 110px auto;
+  width: 610px;
+  height: 200px;
+  position: absolute;
+  top: 160px;
+  left: 365px; }
+  #rotator_images {
+    height: 200px;
+    position: absolute;
+    width: 610px; }
+    #rotator_images0 {
+      height: 190px;
+      z-index: 1;
+      top: 10px; }
+
+    #rotator_images1 {
+      z-index: 3;
+      left: 100px; }
+
+    #rotator_images2 {
+      z-index: 1;
+      height: 190px;
+      left: 210px;
+      top: 10px; }
+
+    #rotator_images3 {
+      z-index: 0;
+      height: 190px;
+      left: 100px;
+      top: 10px; }
+
+  #rotator_button {
+    position: absolute;
+    top: 185px;
+    left: 38%; }
+    #rotator_button li {
+      list-style-type: none;
+      float: left;
+      font-size: 25px;
+      color: blue;
+      height: 3px; }
+  #rotator img {
+    width: 400px;
+    position: absolute; }
+  #rotator #rotator_cover {
+    height: 200px;
+    width: 810px;
+    display: absolute;
+    top: 0; }
+    #rotator_left_cover {
+      width: 305px;
+      position: absolute;
+      left: 0px;
+      background: black;
+      opacity: 0.3;
+      z-index: 2;
+      height: 190px;
+      top: 10px;
+      color: white;
+      font-size: 25px;
+      line-height: 190px;
+      cursor: pointer; }
+
+    #rotator_right_cover {
+      width: 305px;
+      position: absolute;
+      left: 305px;
+      background: black;
+      opacity: 0.3;
+      z-index: 2;
+      height: 190px;
+      top: 10px;
+      color: white;
+      font-size: 25px;
+      text-align: right;
+      line-height: 190px;
+      cursor: pointer; }
+
+#form {
+  width: 50%;
+  background: white;
+  position: absolute;
+  left: 500px;
+  width: 600px;
+  height: 400px;
+  top: 10px;
+  display: none;
+  z-index: 1000;
+  border: 1px #999 solid; }
+  #form h2 {
+    text-align: center;
+    border-bottom: 1px solid #999;
+    margin: 0px; }
+  #form .form-horizontal {
+    margin: 50px 0 0 0; }
+  .col-sm-4 {
+    position: absolute; }
+
+  .user_state {
+    float: left; }
+
+  .password_state {
+    float: left; }
+
+  .email_state {
+    float: left; }
+
+  .user_focus {
+    background: url("../images/reg_info2.png") no-repeat;
+    background-size: 210px 50px;
+    padding: 0 0 0 32px;
+    height: 50px;
+    width: 180px;
+    display: none;
+    line-height: 25px; }
+
+  .user_success {
+    background: url("../images/reg_succ.png") no-repeat;
+    padding: 0 0 0 20px;
+    height: 30px;
+    background-position: 0 10px;
+    line-height: 30px;
+    display: none; }
+
+  .user_error {
+    background: url("../images/reg_error.png") no-repeat;
+    background-size: 210px 30px;
+    padding: 0 0 0 32px;
+    height: 30px;
+    line-height: 30px;
+    display: none; }
+
+  .user_judge {
+    background: url("../images/loading2.gif") no-repeat;
+    background-size: 16px 16px;
+    height: 16px;
+    width: 16px;
+    margin: 10px 0;
+    display: none; }
+
+  .user_errorReName {
+    background: url("../images/reg_error.png") no-repeat;
+    background-size: 210px 30px;
+    padding: 0 0 0 32px;
+    height: 30px;
+    line-height: 30px;
+    display: none; }
+
+  .password_focus {
+    background: url("../images/reg_info2.png") no-repeat;
+    background-size: 210px 50px;
+    padding: 0 0 0 32px;
+    height: 50px;
+    width: 180px;
+    line-height: 25px;
+    display: none; }
+
+  .password_success {
+    background: url("../images/reg_succ.png") no-repeat;
+    padding: 0 0 0 20px;
+    height: 30px;
+    background-position: 0 10px;
+    line-height: 30px;
+    display: none; }
+
+  .password_error {
+    background: url("../images/reg_error.png") no-repeat;
+    background-size: 210px 30px;
+    padding: 0 0 0 32px;
+    height: 30px;
+    line-height: 30px;
+    display: none; }
+
+  .re_password_focus {
+    background: url("../images/reg_info2.png") no-repeat;
+    background-size: 210px 50px;
+    padding: 0 0 0 32px;
+    height: 50px;
+    width: 180px;
+    line-height: 25px;
+    display: none; }
+
+  .re_password_success {
+    background: url("../images/reg_succ.png") no-repeat;
+    padding: 0 0 0 20px;
+    height: 30px;
+    background-position: 0 10px;
+    line-height: 30px;
+    display: none; }
+
+  .re_password_error {
+    background: url("../images/reg_error.png") no-repeat;
+    background-size: 210px 30px;
+    padding: 0 0 0 32px;
+    height: 30px;
+    line-height: 30px;
+    display: none; }
+
+  .email_focus {
+    background: url("../images/reg_info2.png") no-repeat;
+    background-size: 210px 50px;
+    padding: 0 0 0 32px;
+    height: 50px;
+    width: 180px;
+    line-height: 25px;
+    display: none; }
+
+  .email_success {
+    background: url("../images/reg_succ.png") no-repeat;
+    padding: 0 0 0 20px;
+    height: 30px;
+    background-position: 0 10px;
+    line-height: 30px;
+    display: none; }
+
+  .email_error {
+    background: url("../images/reg_error.png") no-repeat;
+    background-size: 210px 30px;
+    padding: 0 0 0 32px;
+    height: 30px;
+    line-height: 30px;
+    display: none; }
+
+.form-group {
+  height: 40px;
+  line-height: 40px; }
+
+#submit {
+  margin: 0 auto;
+  position: absolute;
+  left: 45%;
+  top: 330px; }
+
+#register_close {
+  position: absolute;
+  left: 97%;
+  top: 10px;
+  cursor: pointer; }
+
+.email_extend {
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  top: 284px;
+  left: 104px;
+  background: red;
+  z-index: 5; }
+  .email_ul {
+    padding: 0; }
+
+  .email_li {
+    list-style-type: none;
+    margin: 3px 0;
+    height: 25px;
+    width: 258px;
+    line-height: 25px; }
+
+#weibo {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  border: 1px #999 solid;
+  left: 300px;
+  top: 535px;
+  background: #BBFFFF;
+  overflow: scroll; }
+  .weibo_part {
+    position: relative;
+    border: 1px #999 solid;
+    padding: 22px 22px 5px 22px;
+    margin: 10px 10px;
+    background: white; }
+
+  .weibo_footer {
+    height: 20px;
+    width: 100%;
+    margin-top: 10px; }
+
+  .weibo_part img {
+    width: 20px;
+    height: 20px; }
+
+  .weibo_part_footer {
+    float: left;
+    width: 220px; }
+
+  .weibo_content {
+    margin-left: 30px; }
+
+  .self_comment {
+    position: relative;
+    margin-top: 20px;
+    border-top: 1px solid #999;
+    padding-top: 5px;
+    height: 90px; }
+
+  .comment_user_name {
+    position: relative;
+    top: -30px;
+    margin-right: 20px; }
+
+  .comment_content {
+    width: 600px; }
+
+  .comment_button {
+    margin-left: 30px;
+    margin-top: 50px;
+    padding: 5px; }
+
+#fabo_textarea {
+  width: 600px;
+  position: relative;
+  left: 360px;
+  top: 20px;
+  height: 100px;
+  border: 1px solid #333; }
+
+#fabo_button {
+  position: relative;
+  top: 50px;
+  left: 30px; }
+
+.other_comment {
+  margin-left: 70px;
+  width: 600px; }
+
+.other_comment:last-child {
+  border-bottom: 1px solid #fff; }
+
+.other_comments {
+  border-bottom: 1px solid #999; }
+
+.other_comments:last-child {
+  border-bottom: none; }
+
+.other_comment_bottom_part {
+  float: right; }
+  .other_comment_bottom_part span {
+    margin-right: 30px; }
+
+.other_comment_bottom {
+  height: 30px; }
+
+.other_comment_bottom_part1 {
+  display: none;
+  margin-bottom: 5px; }
+  .other_comment_bottom_part1 input {
+    width: 500px;
+    margin-right: 20px;
+    height: 30px; }
+  .other_comment_bottom_part1 button {
+    padding: 5px;
+    background: #54FF9F;
+    border-radius: 5px; }
+
+.reply_bottom {
+  cursor: pointer; }
+
+/*# sourceMappingURL=index.css.map */

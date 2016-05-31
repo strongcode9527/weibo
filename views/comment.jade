@@ -1,0 +1,21 @@
+doctype html
+div.self_comment
+	span.comment_user_name #{userName}
+	textarea.comment_content
+	button.comment_button 提交
+div.other_comment
+	each comment in comments
+		div(class="other_comments" _id="#{comment._id}") 
+			span.other_comment_userName #{comment.reply_name} 
+			span.ther_comment_comment  #{comment.content}
+			div.other_comment_bottom
+				div.other_comment_bottom_part
+					span.reply_bottom(_id = "#{comment._id}") 回复   
+					img.comment_dianzan(src="images/dianzan.jpg" _id = "#{comment._id}")
+					if (comment.likes)
+						span.comment_dianzansum #{comment.likes}
+					else
+						span.comment_dianzansum
+			div.other_comment_bottom_part1.comment
+				input(type="input" class='reply_comment')
+				button.reply_button 提交

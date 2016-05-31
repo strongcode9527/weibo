@@ -1,0 +1,195 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title weibo
+    link(rel='stylesheet', type='text/css', href='/css/index.css')
+    link(rel='stylesheet', type='text/css', href='/libs/bootstrap/dist/css/bootstrap.css')
+    script(src='/js/jquery.js')
+    script(src='/js/jquery.plugin.js')
+    script(src='/js/function.js')
+    script(src='/js/index.js')
+  body
+    #cover
+    #header
+      img#weibo_logo(src='images/logo.gif')
+      if (user)
+        #log_in.header_part
+          span 欢迎您：
+          span#login_part_name #{user.userName}
+      else
+        #log_in.header_part 登录
+      #register.header_part 注册
+      #persional.header_part
+        | 个人中心
+        #persional_menu
+          .persional_menu_part 发文
+          .persional_menu_part 换肤
+          .persional_menu_part 帮助
+          .persional_menu_part#logout 退出
+    #fabo
+      textarea#fabo_textarea
+      button#fabo_button 发表
+    #log_in_kuang
+      .log_in_kuang_header
+        | 网站登录
+        img#login_close(src='images/close.png')
+      #login_info
+        #log_in_kuang_count.log_in_kuang_part
+          span 账号: 
+          input(type='text',id="login_name")
+        #log_in_kuang_pass.log_in_kuang_part
+          span 密码: 
+          input(type='password',id='login_password')
+      p#login_button 登录
+      #login_error 账号或密码错误
+    #slide
+      #slide_first_level
+        ul#first_ul
+          li.first_ul_li 首页
+          li.first_ul_li 博文列表
+          li.first_ul_li 精彩相册
+          li.first_ul_li 动感音乐
+          li.first_ul_li 关于我
+      #slide_second_level
+        ul#second_ul
+          li.second_ul_li 首页
+          li.second_ul_li 博文列表
+          li.second_ul_li 精彩相册
+          li.second_ul_li 动感音乐
+          li.second_ul_li 关于我
+      #slide_third_level
+        ul#third_ul
+          li.third_ul_li
+          li.third_ul_li
+          li.third_ul_li
+          li.third_ul_li
+          li.third_ul_li
+    #left_bar
+      .left_bar_part
+        h3 标题一
+        ul
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+      .left_bar_part
+        h3 标题二
+        ul
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+      .left_bar_part
+        h3 标题三
+        ul
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+          li aaaaaaaaaaaaaaaaaaaaa
+    #left_slide 分享
+    #rotator
+      #rotator_images
+        img#rotator_images0.rotator_image(src='images/1.png', alt='')
+        img#rotator_images1.rotator_image(src='images/2.png', alt='')
+        img#rotator_images2.rotator_image(src='images/3.png', alt='')
+        img#rotator_images3.rotator_image(src='images/4.png', alt='')
+      #rotator_button
+        ul
+          li#rotator_button0.rotator_button ―
+          li#rotator_button1.rotator_button ―
+          li#rotator_button2.rotator_button ―
+          li#rotator_button3.rotator_button ―
+      #rotator_cover
+        #rotator_left_cover 〈
+        #rotator_right_cover 〉
+    #content
+    #form.row
+      h2 注册
+      img#register_close(src='images/close.png')
+      form.form-horizontal(method='post')
+        .form-group
+          label.col-sm-2.control-label(for='user') 用户姓名
+          .col-sm-6
+            input#user.form-control(type='text',name='user[name]')
+          p.user_focus.user_state.user 请输入用户名 1~8 为组成 包括数字，字符
+          p.user_success.user_state.user 可用
+          p.user_error.user_state.user 输入有误请重新输入
+          img.user_judge.user_state.user
+          p.user_errorReName.user_state.user 用户名已被注册
+        .form-group
+          label.col-sm-2.control-label(for='password') 密码
+          .col-sm-6
+            input#password.form-control(type='password',name='user[password]')
+          p.password_focus.password_state.password 请输入密码 1~8 为组成 包括数字，字符
+          p.password_success.password_state.password 可用
+          p.password_error.password_state.password 输入有误请重新输入
+        .form-group
+          label.col-sm-2.control-label(for='re_password') 确认密码
+          .col-sm-6
+            input#re_password.form-control(type='password',name="user[re_password]")
+          p.re_password_focus.password_state.re_password 请输入密码 1~8 为组成 包括数字，字符
+          p.re_password_success.password_state.re_password 可用
+          p.re_password_error.password_state.re_password 输入有误请重新输入
+        .form-group
+          label.col-sm-2.control-label(for='email') 邮件
+          .col-sm-6
+            input#email.form-control(type='text',name='user[email]')
+          p.email_focus.email_state.email 请输入邮件地址 1~8 为组成 包括数字，字符
+          p.email_success.email_state.email 可用
+          p.email_error.email_state.email 输入有误请重新输入
+          .email_extend
+            ul.email_ul
+              li.email_li1.email_li 
+                span.email_li_span1.email_li_span 
+                span.email_li_com1 @qq.com
+              li.email_li2.email_li 
+                span.email_li_span2.email_li_span 
+                span.email_li_com2 @163.com
+              li.email_li3.email_li 
+                span.email_li_span3.email_li_span 
+                span.email_li_com3 @sina.com
+              li.email_li4.email_li 
+                span.email_li_span4.email_li_span 
+                span.email_li_com4 @sohu.com
+              li.email_li5.email_li 
+                span.email_li_span5.email_li_span 
+                span.email_li_com5 @baidu.com
+              li.email_li6.email_li 
+                span.email_li_span6.email_li_span 
+                span.email_li_com6 @huawei.com
+        input#submit.btn.btn-info(type='button',value="提交") 
+    #weibo.weibo
+      each weibo in weibos
+        div.weibo_part(_id="#{weibo._id}")
+          div.weibo_front #{weibo.user_name}:
+          div.weibo_content
+            div.weibo_content_back #{weibo.content}
+          div.weibo_footer
+            div.weibo_part_footer
+              img(src="images/shoucang.jpg")
+              span 收藏
+            div.weibo_part_footer
+              img(src="images/zhuanfa.jpg")
+              span 
+            div.weibo_part_footer.comment
+              img(src="images/pingjia.jpg")
+              if (weibo.reply.length)
+                span #{weibo.reply.length}
+              else
+                span
+            div.weibo_part_footer.dianzan
+              img(src="images/dianzan.jpg",class='weibo_dianzan',_id="#{weibo._id}")
+              if (weibo.likes)
+                span.weibo_dianzansum #{weibo.likes}
+              else
+                span.weibo_dianzansum 
+          div.weibo_comment
+                
+            
+
+
+
