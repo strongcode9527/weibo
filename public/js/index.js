@@ -592,6 +592,7 @@ $(document).ready(function(){
                  var _id  = $(this).parents('.weibo_part').attr('_id');
                  var comment_content = $(this).prev().val();
                  var name = $('.comment_user_name').text();
+                 that = this;
                  $.ajax({
                   url:'/other_comment',
                   type:'POST',
@@ -602,10 +603,12 @@ $(document).ready(function(){
                     userName:userName
                   },
                   success:function(data){
-                      $('.comment span').html(data.length);
-                      console.log(data.html)
+                      
+                      
                       $comment.html(data.html);
-
+                      $('.comment_button').parents(".weibo_comment").prev(".weibo_footer").children(".comment").children("span").html(data.length);
+                      console.log($(that).css("background",'red'));
+                      //.parents(".weibo_comment").prev(".weibo_footer").children(".comment")
                   }
                   
                  })
@@ -687,7 +690,12 @@ $(document).ready(function(){
               data:{
                 content:$('#fabo_textarea').val(),
                 user_name:$('#login_part_name').text()
+              },
+              success:function(data){
+                $('.weibo').html(data.html);
               }
+            
+
           })
         }
       })

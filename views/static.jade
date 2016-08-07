@@ -1,1 +1,27 @@
-static.jade
+each weibo in weibos
+  div.weibo_part(_id="#{weibo._id}")
+    div.weibo_front #{weibo.user_name}:
+    div.weibo_content
+      div.weibo_content_back #{weibo.content}
+    div.weibo_footer
+      div.weibo_part_footer
+        img(src="images/shoucang.jpg")
+        span 收藏
+      div.weibo_part_footer
+        img(src="images/zhuanfa.jpg")
+        span 
+      div.weibo_part_footer.comment
+        img(src="images/pingjia.jpg")
+        if (weibo.reply.length)
+          span #{weibo.reply.length}
+        else
+          span
+      div.weibo_part_footer.dianzan
+        img(src="images/dianzan.jpg",class='weibo_dianzan',_id="#{weibo._id}")
+        if (weibo.likes)
+          span.weibo_dianzansum #{weibo.likes}
+        else
+          span.weibo_dianzansum 
+    div.weibo_comment
+                
+            

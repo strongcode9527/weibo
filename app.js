@@ -41,7 +41,7 @@ app.get('/',function(req,res,next){
 	Weibo.find({},function(err,data){
 
 		weibos = data;
-	
+	 weibos.reverse();
 		var user = req.session.user;
 		
 		res.render('index.jade',{
@@ -192,6 +192,14 @@ app.post('/fabo',function(req,res){
 	_weibo.save(function(err,data){
 
 	});
+	Weibo.find({},function(err,data){
+		weibos = data;
+		weibos.reverse();
+		res.render('static.jade',{weibos:weibos},function(err,html){
+			res.send({html:html})
+		})
+
+	})
 })
 
 app.post('/weibo_dianzan',function(req,res){
